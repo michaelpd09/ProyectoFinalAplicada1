@@ -147,7 +147,7 @@ namespace SistemasDeBancas
 
                 
         }
-        int id = 1;
+       public static int id = 1;
         public void GuardarDetalleData(string Tipo)
         {
             this.DatosdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -172,7 +172,7 @@ namespace SistemasDeBancas
                 
                 id++;
                 //   ticket.detalles.Add(DetallesBLL.Buscar((int)ServiciosComboBox.SelectedValue));
-                ticket.detalles.Add(DetallesBLL.Buscar(1));
+                ticket.detalles.Add(DetallesBLL.Buscar(id));
                 TotaltextBox.Clear();
                 JugadatextBox.Clear();
                 MontotextBox.Clear();
