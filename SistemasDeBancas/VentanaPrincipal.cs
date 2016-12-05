@@ -99,16 +99,20 @@ namespace SistemasDeBancas
 
         private void Nuevobutton_Click_1(object sender, EventArgs e)
         {
-            DatosdataGridView.DataSource = null;
+   
+            DatosdataGridView.Columns[0].Visible = true;
+            DatosdataGridView.Columns[1].Visible = true;
+            DatosdataGridView.Columns[2].Visible = true;
             MontotextBox.Clear();
             JugadatextBox.Clear();
             IdLoteriatextBox.Clear();
             NombreLoteriatextBox.Clear();
             TotaltextBox.Clear();
             TicketIdTextBox.Clear();
-         
+            DatosdataGridView.DataSource = null;
             Usuariolabel.Text = "";
             IdLoteriatextBox.Focus();
+
 
         }
         int total = 0;
@@ -143,6 +147,7 @@ namespace SistemasDeBancas
 
                 
         }
+        int id = 1;
         public void GuardarDetalleData(string Tipo)
         {
             this.DatosdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -160,12 +165,13 @@ namespace SistemasDeBancas
             detalle.Precio = Utilidades.ToInt(MontotextBox.Text);
             detalle.Tipo = Tipo.ToString();
 
-        
+           
+
             if (DetallesBLL.Guardar(detalle))
             {
-                int id = 1;
+                
                 id++;
-                //                                                                                                                     ticket.detalles.Add(DetallesBLL.Buscar((int)ServiciosComboBox.SelectedValue));
+                //   ticket.detalles.Add(DetallesBLL.Buscar((int)ServiciosComboBox.SelectedValue));
                 ticket.detalles.Add(DetallesBLL.Buscar(1));
                 TotaltextBox.Clear();
                 JugadatextBox.Clear();
@@ -283,7 +289,7 @@ namespace SistemasDeBancas
             if (TicketsBLL.Guardar(ticket))
             {
                 MessageBox.Show("Guardado");
-                DatosdataGridView.DataSource = null;
+               
                 MontotextBox.Clear();
                 JugadatextBox.Clear();
                 IdLoteriatextBox.Clear();
@@ -291,8 +297,9 @@ namespace SistemasDeBancas
                 TotaltextBox.Clear();
                 TicketIdTextBox.Clear();
                 Usuariolabel.Text = "";
-           //     DatosdataGridView.DataSource = null;
-                     IdLoteriatextBox.Focus();
+                //     DatosdataGridView.DataSource = null;
+                DatosdataGridView.DataSource = null;
+                IdLoteriatextBox.Focus();
 
 
             }
@@ -357,8 +364,13 @@ namespace SistemasDeBancas
                     Usuariolabel.Text = ticket.Usuario.ToString();
                     TotaltextBox.Text = ticket.Total.ToString();
                     DatosdataGridView.DataSource = null;
+                    
+                    DatosdataGridView.Columns[0].Visible = false;
+                    DatosdataGridView.Columns[1].Visible = false;
+                    DatosdataGridView.Columns[2].Visible = false;
                     DatosdataGridView.DataSource = ticket.detalles;
-             //       DatosdataGridView.co
+
+                    //       DatosdataGridView.co
                 }
                 else
                 {

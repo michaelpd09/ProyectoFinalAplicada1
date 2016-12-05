@@ -46,14 +46,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.NumerogroupBox = new System.Windows.Forms.GroupBox();
+            this.Usuariolabel = new System.Windows.Forms.Label();
             this.NombredataGridView = new System.Windows.Forms.DataGridView();
             this.UsuarioSistema = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.TotaltextBox = new System.Windows.Forms.TextBox();
             this.DatosdataGridView = new System.Windows.Forms.DataGridView();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jugada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OpcionesgroupBox = new System.Windows.Forms.GroupBox();
             this.Detallebutton = new System.Windows.Forms.Button();
             this.Loteriabutton = new System.Windows.Forms.Button();
@@ -65,7 +63,9 @@
             this.AnularButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Usuariolabel = new System.Windows.Forms.Label();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jugada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VentagroupBox.SuspendLayout();
             this.NumerogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NombredataGridView)).BeginInit();
@@ -292,6 +292,14 @@
             this.NumerogroupBox.TabStop = false;
             this.NumerogroupBox.Text = "Detalle";
             // 
+            // Usuariolabel
+            // 
+            this.Usuariolabel.AutoSize = true;
+            this.Usuariolabel.Location = new System.Drawing.Point(92, 281);
+            this.Usuariolabel.Name = "Usuariolabel";
+            this.Usuariolabel.Size = new System.Drawing.Size(0, 17);
+            this.Usuariolabel.TabIndex = 38;
+            // 
             // NombredataGridView
             // 
             this.NombredataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -357,25 +365,6 @@
             this.DatosdataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DatosdataGridView_CellMouseClick);
             this.DatosdataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DatosdataGridView_MouseClick);
             this.DatosdataGridView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DatosdataGridView_MouseDoubleClick);
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
-            // 
-            // Jugada
-            // 
-            this.Jugada.HeaderText = "Jugada";
-            this.Jugada.Name = "Jugada";
-            this.Jugada.ReadOnly = true;
-            this.Jugada.ToolTipText = "Las Quinielas";
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
             // 
             // OpcionesgroupBox
             // 
@@ -560,13 +549,24 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // Usuariolabel
+            // Monto
             // 
-            this.Usuariolabel.AutoSize = true;
-            this.Usuariolabel.Location = new System.Drawing.Point(92, 281);
-            this.Usuariolabel.Name = "Usuariolabel";
-            this.Usuariolabel.Size = new System.Drawing.Size(0, 17);
-            this.Usuariolabel.TabIndex = 38;
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
+            // 
+            // Jugada
+            // 
+            this.Jugada.HeaderText = "Jugada";
+            this.Jugada.Name = "Jugada";
+            this.Jugada.ReadOnly = true;
+            this.Jugada.ToolTipText = "Las Quinielas";
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
             // 
             // VentanaPrincipal
             // 
@@ -627,10 +627,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        private System.Windows.Forms.Label Usuariolabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jugada;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
-        private System.Windows.Forms.Label Usuariolabel;
     }
 }
