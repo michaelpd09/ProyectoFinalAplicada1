@@ -16,6 +16,6 @@ namespace Entidades
         public string Tipo { get; set; } 
         public DateTime Fecha { get; set;}
        
-        
+        //
     }
 }
