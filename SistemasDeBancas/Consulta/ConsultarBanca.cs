@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using SistemasDeBancas.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,9 @@ using System.Windows.Forms;
 
 namespace SistemasDeBancas.Consulta
 {
-    public partial class ConsultarDetalle : Form
+    public partial class ConsultarBanca : Form
     {
-        public ConsultarDetalle()
+        public ConsultarBanca()
         {
             InitializeComponent();
         }
@@ -25,12 +26,13 @@ namespace SistemasDeBancas.Consulta
 
         private void NuevoButton_Click(object sender, EventArgs e)
         {
-            var ventanaPrincipal = new VentanaPrincipal();
-            ventanaPrincipal.Show();
+            var registroDeLaBanca = new RegistroDeLaBanca();
+            registroDeLaBanca.Show();
             Close();
         }
 
-        public List<Detalles> lista = new List<Detalles>();
+        public List<Bancas> lista = new List<Bancas>();
+
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             this.DatosDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -40,16 +42,16 @@ namespace SistemasDeBancas.Consulta
             if (CamposComboBox.SelectedItem.ToString() == "Id Detalle")
             {
                 if (!String.IsNullOrEmpty(FiltroTextBox.Text))
-                    lista = DetallesBLL.GetLista(Utilidades.ToInt(FiltroTextBox.Text));
+                    lista = BancasBLL.GetLista(Utilidades.ToInt(FiltroTextBox.Text));
                 else
-                    lista = DetallesBLL.GetLista();
+                    lista = BancasBLL.GetLista();
             }
             
             else
             
             {
 
-                lista = DetallesBLL.GetLista();
+                lista = BancasBLL.GetLista();
 
             }
             DatosDataGridView.DataSource = lista;

@@ -61,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label1.Location = new System.Drawing.Point(54, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 24);
@@ -72,7 +72,7 @@
             // 
             this.UsuarioIDTextBox.Enabled = false;
             this.UsuarioIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsuarioIDTextBox.ForeColor = System.Drawing.Color.Blue;
+            this.UsuarioIDTextBox.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.UsuarioIDTextBox.Location = new System.Drawing.Point(180, 36);
             this.UsuarioIDTextBox.Name = "UsuarioIDTextBox";
             this.UsuarioIDTextBox.Size = new System.Drawing.Size(114, 26);
@@ -83,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label2.Location = new System.Drawing.Point(80, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 24);
@@ -95,7 +95,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label3.Location = new System.Drawing.Point(53, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 24);
@@ -106,7 +106,7 @@
             // 
             this.NombreTextBox.Enabled = false;
             this.NombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreTextBox.ForeColor = System.Drawing.Color.Blue;
+            this.NombreTextBox.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.NombreTextBox.Location = new System.Drawing.Point(180, 77);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(257, 26);
@@ -117,7 +117,7 @@
             // 
             this.ClaveTextBox.Enabled = false;
             this.ClaveTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClaveTextBox.ForeColor = System.Drawing.Color.Blue;
+            this.ClaveTextBox.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.ClaveTextBox.Location = new System.Drawing.Point(180, 115);
             this.ClaveTextBox.Name = "ClaveTextBox";
             this.ClaveTextBox.PasswordChar = '*';
@@ -138,7 +138,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label4.Location = new System.Drawing.Point(113, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 24);
@@ -149,7 +149,7 @@
             // 
             this.PerfilComboBox.Enabled = false;
             this.PerfilComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PerfilComboBox.ForeColor = System.Drawing.Color.Blue;
+            this.PerfilComboBox.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.PerfilComboBox.FormattingEnabled = true;
             this.PerfilComboBox.Items.AddRange(new object[] {
             "Cajero",
@@ -172,7 +172,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label5.Location = new System.Drawing.Point(68, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 24);
@@ -183,7 +183,7 @@
             // 
             this.ConfirmarTextBox.Enabled = false;
             this.ConfirmarTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmarTextBox.ForeColor = System.Drawing.Color.Blue;
+            this.ConfirmarTextBox.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.ConfirmarTextBox.Location = new System.Drawing.Point(180, 153);
             this.ConfirmarTextBox.Name = "ConfirmarTextBox";
             this.ConfirmarTextBox.PasswordChar = '*';
@@ -210,7 +210,7 @@
             this.NuevoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NuevoButton.BackgroundImage")));
             this.NuevoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoButton.ForeColor = System.Drawing.Color.Blue;
+            this.NuevoButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.NuevoButton.Location = new System.Drawing.Point(28, 238);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(136, 48);
@@ -225,7 +225,7 @@
             this.SalirButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SalirButton.BackgroundImage")));
             this.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.SalirButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalirButton.ForeColor = System.Drawing.Color.Blue;
+            this.SalirButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.SalirButton.Location = new System.Drawing.Point(301, 238);
             this.SalirButton.Name = "SalirButton";
             this.SalirButton.Size = new System.Drawing.Size(136, 48);
@@ -241,7 +241,7 @@
             this.GuardarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.GuardarButton.Enabled = false;
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuardarButton.ForeColor = System.Drawing.Color.Blue;
+            this.GuardarButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.GuardarButton.Location = new System.Drawing.Point(165, 238);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(136, 48);
@@ -256,7 +256,7 @@
             this.ConsultarUsuarioButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ConsultarUsuarioButton.BackgroundImage")));
             this.ConsultarUsuarioButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ConsultarUsuarioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsultarUsuarioButton.ForeColor = System.Drawing.Color.Blue;
+            this.ConsultarUsuarioButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.ConsultarUsuarioButton.Location = new System.Drawing.Point(300, 17);
             this.ConsultarUsuarioButton.Name = "ConsultarUsuarioButton";
             this.ConsultarUsuarioButton.Size = new System.Drawing.Size(137, 52);
@@ -284,7 +284,7 @@
             this.groupBox1.Controls.Add(this.UsuarioIDTextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox1.Location = new System.Drawing.Point(45, 38);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(477, 295);
@@ -297,7 +297,7 @@
             this.AcceptButton = this.NuevoButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(566, 368);
             this.Controls.Add(this.groupBox1);

@@ -1,6 +1,6 @@
 ﻿namespace SistemasDeBancas.Registros
 {
-    partial class RegisttroDeLaBanca
+    partial class RegistroDeLaBanca
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisttroDeLaBanca));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroDeLaBanca));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.rnctextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.SalirButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
@@ -42,9 +45,6 @@
             this.BancaIDTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.rnctextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,36 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro de Usuario";
+            // 
+            // TelefonomaskedTextBox
+            // 
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(180, 156);
+            this.TelefonomaskedTextBox.Mask = "(999)000-0000";
+            this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(257, 23);
+            this.TelefonomaskedTextBox.TabIndex = 20;
+            // 
+            // rnctextBox
+            // 
+            this.rnctextBox.Enabled = false;
+            this.rnctextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rnctextBox.ForeColor = System.Drawing.Color.Blue;
+            this.rnctextBox.Location = new System.Drawing.Point(182, 193);
+            this.rnctextBox.Name = "rnctextBox";
+            this.rnctextBox.Size = new System.Drawing.Size(257, 26);
+            this.rnctextBox.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label4.Location = new System.Drawing.Point(109, 192);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 24);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "RNC:";
             // 
             // label5
             // 
@@ -145,6 +175,7 @@
             this.ConsultarButton.Text = "Consultar";
             this.ConsultarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultarButton.UseVisualStyleBackColor = true;
+            this.ConsultarButton.Click += new System.EventHandler(this.ConsultarButton_Click);
             // 
             // DireccionTextBox
             // 
@@ -153,7 +184,6 @@
             this.DireccionTextBox.ForeColor = System.Drawing.Color.Blue;
             this.DireccionTextBox.Location = new System.Drawing.Point(180, 116);
             this.DireccionTextBox.Name = "DireccionTextBox";
-            this.DireccionTextBox.PasswordChar = '*';
             this.DireccionTextBox.Size = new System.Drawing.Size(257, 26);
             this.DireccionTextBox.TabIndex = 6;
             // 
@@ -221,38 +251,7 @@
             this.FechadateTimePicker.Value = new System.DateTime(2016, 11, 25, 0, 0, 0, 0);
             this.FechadateTimePicker.Visible = false;
             // 
-            // rnctextBox
-            // 
-            this.rnctextBox.Enabled = false;
-            this.rnctextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rnctextBox.ForeColor = System.Drawing.Color.Blue;
-            this.rnctextBox.Location = new System.Drawing.Point(182, 193);
-            this.rnctextBox.Name = "rnctextBox";
-            this.rnctextBox.PasswordChar = '*';
-            this.rnctextBox.Size = new System.Drawing.Size(257, 26);
-            this.rnctextBox.TabIndex = 19;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label4.Location = new System.Drawing.Point(109, 192);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 24);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "RNC:";
-            // 
-            // TelefonomaskedTextBox
-            // 
-            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(180, 156);
-            this.TelefonomaskedTextBox.Mask = "(999)000-0000";
-            this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
-            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(257, 23);
-            this.TelefonomaskedTextBox.TabIndex = 20;
-            // 
-            // RegisttroDeLaBanca
+            // RegistroDeLaBanca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +259,7 @@
             this.ClientSize = new System.Drawing.Size(584, 408);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.FechadateTimePicker);
-            this.Name = "RegisttroDeLaBanca";
+            this.Name = "RegistroDeLaBanca";
             this.Text = "RegisttroDeLaBanca";
             this.Load += new System.EventHandler(this.RegisttroDeLaBanca_Load);
             this.groupBox1.ResumeLayout(false);

@@ -36,9 +36,9 @@
             this.FiltroTextBox = new System.Windows.Forms.TextBox();
             this.CamposComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.EditarButton = new System.Windows.Forms.Button();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DatosDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.NuevoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NuevoButton.BackgroundImage")));
             this.NuevoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoButton.ForeColor = System.Drawing.Color.Blue;
+            this.NuevoButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.NuevoButton.Location = new System.Drawing.Point(28, 325);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(136, 48);
@@ -63,7 +63,7 @@
             this.SalirButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SalirButton.BackgroundImage")));
             this.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.SalirButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalirButton.ForeColor = System.Drawing.Color.Blue;
+            this.SalirButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.SalirButton.Location = new System.Drawing.Point(475, 325);
             this.SalirButton.Name = "SalirButton";
             this.SalirButton.Size = new System.Drawing.Size(136, 48);
@@ -87,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label1.Location = new System.Drawing.Point(24, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 24);
@@ -100,7 +100,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FiltroTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.FiltroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiltroTextBox.ForeColor = System.Drawing.Color.Blue;
+            this.FiltroTextBox.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.FiltroTextBox.Location = new System.Drawing.Point(227, 26);
             this.FiltroTextBox.Name = "FiltroTextBox";
             this.FiltroTextBox.Size = new System.Drawing.Size(245, 38);
@@ -110,7 +110,7 @@
             // 
             this.CamposComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CamposComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CamposComboBox.ForeColor = System.Drawing.Color.Blue;
+            this.CamposComboBox.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.CamposComboBox.FormattingEnabled = true;
             this.CamposComboBox.Items.AddRange(new object[] {
             "UsuarioID",
@@ -132,7 +132,7 @@
             this.groupBox1.Controls.Add(this.EditarButton);
             this.groupBox1.Controls.Add(this.NuevoButton);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(634, 401);
@@ -140,13 +140,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consultar Usuario";
             // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Buscarbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.BackgroundImage")));
+            this.Buscarbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(477, 21);
+            this.Buscarbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(136, 48);
+            this.Buscarbutton.TabIndex = 70;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
+            // 
             // EliminarButton
             // 
             this.EliminarButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarButton.BackgroundImage")));
             this.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.EliminarButton.Enabled = false;
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarButton.ForeColor = System.Drawing.Color.Blue;
+            this.EliminarButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.EliminarButton.Location = new System.Drawing.Point(326, 325);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(136, 48);
@@ -162,7 +180,7 @@
             this.EditarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.EditarButton.Enabled = false;
             this.EditarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditarButton.ForeColor = System.Drawing.Color.Blue;
+            this.EditarButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.EditarButton.Location = new System.Drawing.Point(177, 325);
             this.EditarButton.Name = "EditarButton";
             this.EditarButton.Size = new System.Drawing.Size(136, 48);
@@ -172,29 +190,11 @@
             this.EditarButton.UseVisualStyleBackColor = true;
             this.EditarButton.Click += new System.EventHandler(this.EditarButton_Click_1);
             // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Buscarbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.BackgroundImage")));
-            this.Buscarbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.ForeColor = System.Drawing.Color.Blue;
-            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(477, 21);
-            this.Buscarbutton.Margin = new System.Windows.Forms.Padding(2);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(136, 48);
-            this.Buscarbutton.TabIndex = 70;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
-            // 
             // ConsultaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(669, 434);
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultaUsuarios";

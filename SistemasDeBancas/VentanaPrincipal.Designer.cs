@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.NumerogroupBox = new System.Windows.Forms.GroupBox();
+            this.Usuariolabel = new System.Windows.Forms.Label();
             this.NombredataGridView = new System.Windows.Forms.DataGridView();
             this.UsuarioSistema = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.AnularButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Usuariolabel = new System.Windows.Forms.Label();
             this.VentagroupBox.SuspendLayout();
             this.NumerogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NombredataGridView)).BeginInit();
@@ -292,6 +292,14 @@
             this.NumerogroupBox.TabStop = false;
             this.NumerogroupBox.Text = "Detalle";
             // 
+            // Usuariolabel
+            // 
+            this.Usuariolabel.AutoSize = true;
+            this.Usuariolabel.Location = new System.Drawing.Point(92, 281);
+            this.Usuariolabel.Name = "Usuariolabel";
+            this.Usuariolabel.Size = new System.Drawing.Size(0, 17);
+            this.Usuariolabel.TabIndex = 38;
+            // 
             // NombredataGridView
             // 
             this.NombredataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -411,7 +419,7 @@
             this.Detallebutton.Name = "Detallebutton";
             this.Detallebutton.Size = new System.Drawing.Size(136, 48);
             this.Detallebutton.TabIndex = 29;
-            this.Detallebutton.Text = "Detalle";
+            this.Detallebutton.Text = "Banca";
             this.Detallebutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Detallebutton.UseVisualStyleBackColor = false;
             this.Detallebutton.Click += new System.EventHandler(this.Detallebutton_Click);
@@ -559,14 +567,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // Usuariolabel
-            // 
-            this.Usuariolabel.AutoSize = true;
-            this.Usuariolabel.Location = new System.Drawing.Point(92, 281);
-            this.Usuariolabel.Name = "Usuariolabel";
-            this.Usuariolabel.Size = new System.Drawing.Size(0, 17);
-            this.Usuariolabel.TabIndex = 38;
             // 
             // VentanaPrincipal
             // 

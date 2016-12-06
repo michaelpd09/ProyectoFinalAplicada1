@@ -90,11 +90,11 @@
     <Compile Include="Consulta\ConsultaLoteria.Designer.cs">
       <DependentUpon>ConsultaLoteria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consulta\ConsultarDetalle.cs">
+    <Compile Include="Consulta\ConsultarBanca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consulta\ConsultarDetalle.Designer.cs">
-      <DependentUpon>ConsultarDetalle.cs</DependentUpon>
+    <Compile Include="Consulta\ConsultarBanca.Designer.cs">
+      <DependentUpon>ConsultarBanca.cs</DependentUpon>
     </Compile>
     <Compile Include="Consulta\ConsultaUsuarios.cs">
       <SubType>Form</SubType>
@@ -139,11 +139,11 @@
     <Compile Include="Registros\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\RegisttroDeLaBanca.cs">
+    <Compile Include="Registros\RegistroDeLaBanca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registros\RegisttroDeLaBanca.Designer.cs">
-      <DependentUpon>RegisttroDeLaBanca.cs</DependentUpon>
+    <Compile Include="Registros\RegistroDeLaBanca.Designer.cs">
+      <DependentUpon>RegistroDeLaBanca.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades\Utilidades.cs" />
     <Compile Include="VentanaPrincipal.cs">
@@ -155,8 +155,8 @@
     <EmbeddedResource Include="Consulta\ConsultaLoteria.resx">
       <DependentUpon>ConsultaLoteria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consulta\ConsultarDetalle.resx">
-      <DependentUpon>ConsultarDetalle.cs</DependentUpon>
+    <EmbeddedResource Include="Consulta\ConsultarBanca.resx">
+      <DependentUpon>ConsultarBanca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
@@ -181,8 +181,8 @@
     <EmbeddedResource Include="Registros\RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registros\RegisttroDeLaBanca.resx">
-      <DependentUpon>RegisttroDeLaBanca.cs</DependentUpon>
+    <EmbeddedResource Include="Registros\RegistroDeLaBanca.resx">
+      <DependentUpon>RegistroDeLaBanca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>

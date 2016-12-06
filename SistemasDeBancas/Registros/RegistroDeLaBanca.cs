@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SistemasDeBancas.Registros
 {
-    public partial class RegisttroDeLaBanca : Form
+    public partial class RegistroDeLaBanca : Form
     {
-        public RegisttroDeLaBanca()
+        public RegistroDeLaBanca()
         {
             InitializeComponent();
         }
@@ -44,7 +46,32 @@ namespace SistemasDeBancas.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+           var banca = new Bancas();
 
+
+            banca.Direccion = DireccionTextBox.Text;
+            banca.Nombre = NombreTextBox.Text;
+            banca.Telefono = TelefonomaskedTextBox.Text;
+            banca.RNC = rnctextBox.Text;
+
+
+            if (BancasBLL.Guardar(banca))
+            {
+                MessageBox.Show("Guardado.....");
+                NombreTextBox.Clear();
+               DireccionTextBox.Clear();
+                TelefonomaskedTextBox.Clear();
+                rnctextBox.Clear();
+            }
+
+            else
+                MessageBox.Show("Error al guardar");
+        }
+
+        private void ConsultarButton_Click(object sender, EventArgs e)
+        {
+            var cl = new Consulta.ConsultarBanca();
+            cl.Show();
         }
     }
 }

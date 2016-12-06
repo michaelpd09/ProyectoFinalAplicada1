@@ -304,8 +304,8 @@ namespace SistemasDeBancas
 
         private void Detallebutton_Click(object sender, EventArgs e)
         {
-            var consultaDetalles = new Consulta.ConsultarDetalle();
-            consultaDetalles.Show();
+            var rb = new Registros.RegistroDeLaBanca();
+            rb.Show();
         }
 
         public List<Detalles> listaDetalles = new List<Detalles>();
@@ -334,7 +334,7 @@ namespace SistemasDeBancas
         {
             if (string.IsNullOrEmpty(TicketIdTextBox.Text))
             {
-                MessageBox.Show("Tienes el campo ID vacio");
+                MessageBox.Show("LLena el campo con el numero de Ticket");
             }
             else
             {
@@ -342,16 +342,6 @@ namespace SistemasDeBancas
                 if (ticket != null)
                 {
 
-                    //NombreClienteTextBox.Text = fact.NombreCliente;
-                    //FechaActualDateTimePicker.Text = fact.Fecha.ToString();
-                    //MontoAdicionalTextBox.Text = fact.MontoAdicional.ToString();
-                    //ImpuestoTextBox.Text = fact.Impuesto.ToString();
-                    //DescuentoTextBox.Text = fact.Descuento.ToString();
-                    //ComentarioRichTextBox.Text = fact.Comentario;
-                    //ServiciosDataGridView.DataSource = null;
-                    //ServiciosDataGridView.DataSource = fact.Service;
-                    //TipoPagoTextBox.Text = fact.TipoPago;
-                    //TotalTextBox.Text = fact.Total.ToString();
                     IdLoteriatextBox.Text = (ticket.IdLoteria).ToString();
                     NombreLoteriatextBox.Text = (ticket.NombreLoteria).ToString();
                     FechadateTimePicker.Text = (ticket.Fecha).ToString();
@@ -365,7 +355,7 @@ namespace SistemasDeBancas
                 }
                 else
                 {
-                    MessageBox.Show("Esta Factura no Existe");
+                    MessageBox.Show("Este Ticket no Existe");
                    
                     MontotextBox.Clear();
                     JugadatextBox.Clear();
