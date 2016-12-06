@@ -320,16 +320,20 @@ namespace SistemasDeBancas
                 DialogResult dialogo = MessageBox.Show("Desea Borrar el Querido Usuario", "Borrarando Usuarios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogo == DialogResult.Yes)
                 {
-                    int detalleId = Convert.ToInt32( DatosdataGridView.CurrentRow.Cells["detalleId"].Value);
+                    int detalleId = Convert.ToInt32( DatosdataGridView.CurrentRow.Cells["IdDetalle"].Value);
                    DetallesBLL.Eliminar(detalleId);
-                   
+                    DatosdataGridView.DataSource = null;
+                    DatosdataGridView.DataSource = ticket.detalles;
+                    DatosdataGridView.Columns[0].Visible = false;
+                    DatosdataGridView.Columns[1].Visible = false;
+                    DatosdataGridView.Columns[2].Visible = false;
                 }
             }
             else
             {
-                return;
-
+                MessageBox.Show("No hay Juagada!!!");
             }
+
             
         }
 
@@ -373,6 +377,30 @@ namespace SistemasDeBancas
                     DatosdataGridView.Columns[1].Visible = true;
                 }
             }
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            if (TicketIdTextBox != null)
+            {
+                DialogResult dialogo = MessageBox.Show("Desea Borrar el Ticket", "Borrarando Ticket", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogo == DialogResult.Yes)
+                {
+                    int TicketId = Utilidades.ToInt(TicketIdTextBox.Text);
+                    TicketsBLL.Eliminar(TicketId);
+
+                    TicketIdTextBox.Clear();
+                    TicketIdTextBox.Focus();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Inserte el Ticket a Borrar");
+                TicketIdTextBox.Focus();
+
+            }
+           
         }
     }
 }

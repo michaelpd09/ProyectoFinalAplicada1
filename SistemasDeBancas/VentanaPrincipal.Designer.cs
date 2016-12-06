@@ -63,7 +63,7 @@
             this.ReimprimirButton = new System.Windows.Forms.Button();
             this.SalirButton = new System.Windows.Forms.Button();
             this.Cancelarbutton = new System.Windows.Forms.Button();
-            this.AnularButton = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.VentagroupBox.SuspendLayout();
@@ -395,7 +395,7 @@
             this.OpcionesgroupBox.Controls.Add(this.ReimprimirButton);
             this.OpcionesgroupBox.Controls.Add(this.SalirButton);
             this.OpcionesgroupBox.Controls.Add(this.Cancelarbutton);
-            this.OpcionesgroupBox.Controls.Add(this.AnularButton);
+            this.OpcionesgroupBox.Controls.Add(this.EliminarButton);
             this.OpcionesgroupBox.Controls.Add(this.GuardarButton);
             this.OpcionesgroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpcionesgroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -529,22 +529,23 @@
             this.Cancelarbutton.UseVisualStyleBackColor = false;
             this.Cancelarbutton.Click += new System.EventHandler(this.Nuevobutton_Click_1);
             // 
-            // AnularButton
+            // EliminarButton
             // 
-            this.AnularButton.AccessibleName = "";
-            this.AnularButton.BackColor = System.Drawing.Color.White;
-            this.AnularButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AnularButton.BackgroundImage")));
-            this.AnularButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AnularButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnularButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.AnularButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AnularButton.Location = new System.Drawing.Point(35, 188);
-            this.AnularButton.Name = "AnularButton";
-            this.AnularButton.Size = new System.Drawing.Size(136, 48);
-            this.AnularButton.TabIndex = 22;
-            this.AnularButton.Text = "Anular";
-            this.AnularButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AnularButton.UseVisualStyleBackColor = false;
+            this.EliminarButton.AccessibleName = "";
+            this.EliminarButton.BackColor = System.Drawing.Color.White;
+            this.EliminarButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarButton.BackgroundImage")));
+            this.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarButton.Location = new System.Drawing.Point(35, 188);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(136, 48);
+            this.EliminarButton.TabIndex = 22;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EliminarButton.UseVisualStyleBackColor = false;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -606,7 +607,7 @@
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox MontotextBox;
         public System.Windows.Forms.Button GuardarButton;
-        public System.Windows.Forms.Button AnularButton;
+        public System.Windows.Forms.Button EliminarButton;
         public System.Windows.Forms.Button Cancelarbutton;
         public System.Windows.Forms.Button ReimprimirButton;
         private System.Windows.Forms.Button SalirButton;

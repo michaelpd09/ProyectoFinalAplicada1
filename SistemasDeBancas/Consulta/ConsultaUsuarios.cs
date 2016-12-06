@@ -219,7 +219,7 @@ namespace SistemasDeBancas.Consulta
             }
             else
             {
-                return;
+                MessageBox.Show("No hay Usuario para Borrar");
 
             }
             DatosDataGridView.DataSource = lista;
