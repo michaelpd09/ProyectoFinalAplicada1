@@ -19,9 +19,9 @@ namespace SistemasDeBancas
         public VentanaPrincipal()
         {
             InitializeComponent();
-            ticket = new Tickets();   
+            ticket = new Tickets();
         }
-        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
 
@@ -34,12 +34,12 @@ namespace SistemasDeBancas
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -47,24 +47,26 @@ namespace SistemasDeBancas
         {
         }
 
-           
+
 
 
         private void VentanaPrincipal_Load(object sender, EventArgs e)
         {
-           
+            var login = new Login();
+            Usuariolabel.Text = login.Usuario.Text;
             MaximizeBox = false;
             timer1.Enabled = true;
+
             IdLoteriatextBox.Focus();
 
         }
-       
+
 
         private void AbrirVentas_Click(object sender, EventArgs e)
         {
 
-           
-            
+
+
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -80,9 +82,9 @@ namespace SistemasDeBancas
 
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
-            
 
-            
+
+
         }
 
         private void SalirButton_Click_1(object sender, EventArgs e)
@@ -92,21 +94,21 @@ namespace SistemasDeBancas
 
         private void UsuarioButton_Click_1(object sender, EventArgs e)
         {
-            
+
             RegistroUsuarios rg = new RegistroUsuarios();
             rg.Visible = true;
         }
 
         private void Nuevobutton_Click_1(object sender, EventArgs e)
         {
-       
+
             MontotextBox.Clear();
             JugadatextBox.Clear();
             IdLoteriatextBox.Clear();
             NombreLoteriatextBox.Clear();
             TotaltextBox.Clear();
             TicketIdTextBox.Clear();
-         
+
             Usuariolabel.Text = "";
             DatosdataGridView.DataSource = null;
             DatosdataGridView.Columns[0].Visible = true;
@@ -118,34 +120,42 @@ namespace SistemasDeBancas
         int total = 0;
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
-           
-           
+            if(!(string.IsNullOrEmpty(IdLoteriatextBox.Text)))
+            {
 
-            if ((JugadatextBox.Text).Length > 0 && ((JugadatextBox.Text).Length < 3))
-            {
-                string tipo = "Quiniela";
-                GuardarDetalleData(tipo);
-            }
-            else
-            if ((JugadatextBox.Text).Length >= 3 && (JugadatextBox.Text).Length < 5)
-            {
-                string tipo = "Pale";
-                GuardarDetalleData(tipo);
-            }
-            else
-                  if ((JugadatextBox.Text).Length >= 5 && (JugadatextBox.Text).Length < 7)
-            {
-                string tipo = "Tripleta";
-                GuardarDetalleData(tipo);
-            }
-            else
-            {
-                MessageBox.Show("Error en el Formato");
-                MontotextBox.Focus();
-            }
-               
 
-                
+
+                if ((JugadatextBox.Text).Length > 0 && ((JugadatextBox.Text).Length < 3))
+                {
+                    string tipo = "Quiniela";
+                    GuardarDetalleData(tipo);
+                }
+                else
+                if ((JugadatextBox.Text).Length >= 3 && (JugadatextBox.Text).Length < 5)
+                {
+                    string tipo = "Pale";
+                    GuardarDetalleData(tipo);
+                }
+                else
+                      if ((JugadatextBox.Text).Length >= 5 && (JugadatextBox.Text).Length < 7)
+                {
+                    string tipo = "Tripleta";
+                    GuardarDetalleData(tipo);
+                }
+                else
+                {
+                    MessageBox.Show("Error en el Formato");
+                    MontotextBox.Focus();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("No puedes crear jugada sin especificar una loteria");
+                Loteriabutton.Focus();
+            }
+
+
         }
         int id = 1;
         public void GuardarDetalleData(string Tipo)
@@ -160,17 +170,16 @@ namespace SistemasDeBancas
             DatosdataGridView[1, cantFilas].Value = JugadatextBox.Text;
             DatosdataGridView[2, cantFilas].Value = MontotextBox.Text;
             total = total + Utilidades.ToInt(MontotextBox.Text);
-          //  detalle.IdLoteria = Utilidades.ToInt(Loteriabutton.Text);
+            //  detalle.IdLoteria = Utilidades.ToInt(Loteriabutton.Text);
             detalle.Jugada = Utilidades.ToInt(JugadatextBox.Text);
             detalle.Precio = Utilidades.ToInt(MontotextBox.Text);
             detalle.Tipo = Tipo.ToString();
 
-        
+
             if (DetallesBLL.Guardar(detalle))
             {
-               
+
                 id++;
-     // ticket.detalles.Add(DetallesBLL.Buscar((int)ServiciosComboBox.SelectedValue));
                 ticket.detalles.Add(DetallesBLL.Buscar(id));
                 TotaltextBox.Clear();
                 JugadatextBox.Clear();
@@ -204,12 +213,12 @@ namespace SistemasDeBancas
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
             {
-      
+
                 this.NombredataGridView.MultiSelect = false;
                 this.NombredataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            
+
                 if (!String.IsNullOrEmpty(IdLoteriatextBox.Text))
                     lista = LoteriasBLL.GetListaLoteriaID(Utilidades.ToInt(IdLoteriatextBox.Text));
                 else
@@ -229,7 +238,7 @@ namespace SistemasDeBancas
                     IdLoteriatextBox.Clear();
                     IdLoteriatextBox.Focus();
                 }
-                   
+
 
 
             }
@@ -243,8 +252,8 @@ namespace SistemasDeBancas
 
         private void MontotextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
-              JugadatextBox.Focus();
+            if (e.KeyChar == (char)Keys.Enter)
+                JugadatextBox.Focus();
         }
 
         private void NumerotextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -260,52 +269,63 @@ namespace SistemasDeBancas
 
         private void DatosdataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-           
+
         }
 
         private void DatosdataGridView_MouseClick(object sender, MouseEventArgs e)
         {
-           
+
             this.DatosdataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            
-           
+
+
         }
 
         private void GuardarButton_Click_1(object sender, EventArgs e)
         {
-
-            int Id;
-            int.TryParse(TicketIdTextBox.Text, out Id);
-            ticket.IdLoteria = Utilidades.ToInt(IdLoteriatextBox.Text);
-            ticket.Fecha = FechadateTimePicker.Value;
-            ticket.Usuario = "Juan peres";
-            ticket.Nulo = false;
-            ticket.Total = Utilidades.ToInt(TotaltextBox.Text);
-            ticket.IdDetalle = 1;
-            ticket.IdTicket = Id;
-            ticket.NombreLoteria = NombreLoteriatextBox.Text;
-
-            if (TicketsBLL.Guardar(ticket))
+            if (Utilidades.ToInt(TotaltextBox.Text) > 0) 
             {
-                MessageBox.Show("Guardado");
-                DatosdataGridView.DataSource = null;
-                MontotextBox.Clear();
-                JugadatextBox.Clear();
-                IdLoteriatextBox.Clear();
-                NombreLoteriatextBox.Clear();
-                TotaltextBox.Clear();
-                TicketIdTextBox.Clear();
-                Usuariolabel.Text = "";
-                DatosdataGridView.DataSource = null;
-                DatosdataGridView.Columns[0].Visible = true;
-                DatosdataGridView.Columns[2].Visible = true;
-                DatosdataGridView.Columns[1].Visible = true;
-               
-                IdLoteriatextBox.Focus();
+                int Id;
+                int.TryParse(TicketIdTextBox.Text, out Id);
+                ticket.IdLoteria = Utilidades.ToInt(IdLoteriatextBox.Text);
+                ticket.Fecha = FechadateTimePicker.Value;
+                ticket.Usuario = "Juan peres";
+                ticket.Nulo = false;
+                ticket.Total = Utilidades.ToInt(TotaltextBox.Text);
+                ticket.IdDetalle = 1;
+                ticket.IdTicket = Id;
+                ticket.NombreLoteria = NombreLoteriatextBox.Text;
 
+                if (TicketsBLL.Guardar(ticket))
+                {
+                    MessageBox.Show("Guardado");
+                    DatosdataGridView.DataSource = null;
+                    MontotextBox.Clear();
+                    JugadatextBox.Clear();
+                    IdLoteriatextBox.Clear();
+                    NombreLoteriatextBox.Clear();
+                    TotaltextBox.Clear();
+                    TicketIdTextBox.Clear();
+                    Usuariolabel.Text = "";
+                    DatosdataGridView.DataSource = null;
+                    DatosdataGridView.Columns[0].Visible = true;
+                    DatosdataGridView.Columns[2].Visible = true;
+                    DatosdataGridView.Columns[1].Visible = true;
+
+                    IdLoteriatextBox.Focus();
+
+                }
+                else
+                {
+                    MessageBox.Show("Error hay Guardar el ticket");
+                    IdLoteriatextBox.Focus();
+                }
             }
-           
-
+            else
+            {
+                MessageBox.Show("Tienes que insertar al menos una jugada...");
+                IdLoteriatextBox.Focus();
+            }
+            
         }
 
         private void Detallebutton_Click(object sender, EventArgs e)
@@ -323,8 +343,8 @@ namespace SistemasDeBancas
                 DialogResult dialogo = MessageBox.Show("Desea Borrar el Querido Usuario", "Borrarando Usuarios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogo == DialogResult.Yes)
                 {
-                    int detalleId = Convert.ToInt32( DatosdataGridView.CurrentRow.Cells["IdDetalle"].Value);
-                   DetallesBLL.Eliminar(detalleId);
+                    int detalleId = Convert.ToInt32(DatosdataGridView.CurrentRow.Cells["IdDetalle"].Value);
+                    DetallesBLL.Eliminar(detalleId);
                     DatosdataGridView.DataSource = null;
                     DatosdataGridView.DataSource = ticket.detalles;
                     DatosdataGridView.Columns[0].Visible = false;
@@ -337,7 +357,7 @@ namespace SistemasDeBancas
                 MessageBox.Show("No hay Juagada!!!");
             }
 
-            
+
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -366,7 +386,7 @@ namespace SistemasDeBancas
                 else
                 {
                     MessageBox.Show("Este Ticket no Existe");
-                   
+
                     MontotextBox.Clear();
                     JugadatextBox.Clear();
                     IdLoteriatextBox.Clear();
@@ -384,15 +404,48 @@ namespace SistemasDeBancas
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            if (TicketIdTextBox != null)
+            if (string.IsNullOrEmpty(TicketIdTextBox.Text))
             {
-                DialogResult dialogo = MessageBox.Show("Desea Borrar el Ticket", "Borrarando Ticket", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dialogo == DialogResult.Yes)
+                MessageBox.Show("LLena el campo con el numero de Ticket");
+            }
+            else
+            {
+                var ticket = TicketsBLL.Buscar(Convert.ToInt32(TicketIdTextBox.Text));
+                if (ticket != null)
                 {
-                    int TicketId = Utilidades.ToInt(TicketIdTextBox.Text);
-                    TicketsBLL.Eliminar(TicketId);
 
-                  
+                    IdLoteriatextBox.Text = (ticket.IdLoteria).ToString();
+                    NombreLoteriatextBox.Text = (ticket.NombreLoteria).ToString();
+                    FechadateTimePicker.Text = (ticket.Fecha).ToString();
+                    Usuariolabel.Text = ticket.Usuario.ToString();
+                    TotaltextBox.Text = ticket.Total.ToString();
+                    DatosdataGridView.DataSource = null;
+                    DatosdataGridView.DataSource = ticket.detalles;
+                    DatosdataGridView.Columns[0].Visible = false;
+                    DatosdataGridView.Columns[1].Visible = false;
+                    DatosdataGridView.Columns[2].Visible = false;
+                    DialogResult dialogo = MessageBox.Show("Desea Borrar el Ticket", "Borrarando Ticket", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogo == DialogResult.Yes)
+                    {
+                        int TicketId = Utilidades.ToInt(TicketIdTextBox.Text);
+                        TicketsBLL.Eliminar(TicketId);
+                        MontotextBox.Clear();
+                        JugadatextBox.Clear();
+                        IdLoteriatextBox.Clear();
+                        NombreLoteriatextBox.Clear();
+                        TotaltextBox.Clear();
+                        TicketIdTextBox.Clear();
+                        DatosdataGridView.DataSource = null;
+                        DatosdataGridView.Columns[0].Visible = true;
+                        DatosdataGridView.Columns[2].Visible = true;
+                        DatosdataGridView.Columns[1].Visible = true;
+                        TicketIdTextBox.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Este Ticket no Existe");
+
                     MontotextBox.Clear();
                     JugadatextBox.Clear();
                     IdLoteriatextBox.Clear();
@@ -400,22 +453,18 @@ namespace SistemasDeBancas
                     TotaltextBox.Clear();
                     TicketIdTextBox.Clear();
                     DatosdataGridView.DataSource = null;
-                    TicketIdTextBox.Focus();
                     DatosdataGridView.Columns[0].Visible = true;
                     DatosdataGridView.Columns[2].Visible = true;
                     DatosdataGridView.Columns[1].Visible = true;
                     TicketIdTextBox.Focus();
-
-
                 }
-            }
-            else
-            {
-                MessageBox.Show("Inserte el Ticket a Borrar");
-                TicketIdTextBox.Focus();
 
             }
-           
+        }
+
+        private void VentagroupBox_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

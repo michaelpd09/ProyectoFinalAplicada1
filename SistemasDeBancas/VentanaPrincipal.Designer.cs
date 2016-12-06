@@ -99,6 +99,7 @@
             this.VentagroupBox.TabIndex = 32;
             this.VentagroupBox.TabStop = false;
             this.VentagroupBox.Text = "Venta";
+            this.VentagroupBox.Enter += new System.EventHandler(this.VentagroupBox_Enter);
             // 
             // FechadateTimePicker
             // 

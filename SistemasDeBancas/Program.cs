@@ -16,7 +16,7 @@ namespace SistemasDeBancas
            
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
-          //   if (Login.Validar())
+             if (Login.Validar())
                 Application.Run(new VentanaPrincipal());
             
                

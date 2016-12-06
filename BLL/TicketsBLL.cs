@@ -66,7 +66,6 @@ namespace BLL
             }
             catch (Exception)
             {
-
                 throw;
             }
             return retorno;
