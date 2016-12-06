@@ -359,7 +359,9 @@ namespace SistemasDeBancas
                     TotaltextBox.Text = ticket.Total.ToString();
                     DatosdataGridView.DataSource = null;
                     DatosdataGridView.DataSource = ticket.detalles;
-             //       DatosdataGridView.co
+                    DatosdataGridView.Columns[0].Visible = false;
+                    DatosdataGridView.Columns[1].Visible = false;
+                    DatosdataGridView.Columns[2].Visible = false;
                 }
                 else
                 {
@@ -373,6 +375,9 @@ namespace SistemasDeBancas
                     TicketIdTextBox.Clear();
                     DatosdataGridView.DataSource = null;
                     TicketIdTextBox.Focus();
+                    DatosdataGridView.Columns[0].Visible = true;
+                    DatosdataGridView.Columns[2].Visible = true;
+                    DatosdataGridView.Columns[1].Visible = true;
                 }
             }
         }
