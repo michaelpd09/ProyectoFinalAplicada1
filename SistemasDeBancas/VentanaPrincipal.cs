@@ -99,7 +99,7 @@ namespace SistemasDeBancas
 
         private void Nuevobutton_Click_1(object sender, EventArgs e)
         {
-            DatosdataGridView.DataSource = null;
+       
             MontotextBox.Clear();
             JugadatextBox.Clear();
             IdLoteriatextBox.Clear();
@@ -108,6 +108,10 @@ namespace SistemasDeBancas
             TicketIdTextBox.Clear();
          
             Usuariolabel.Text = "";
+            DatosdataGridView.DataSource = null;
+            DatosdataGridView.Columns[0].Visible = true;
+            DatosdataGridView.Columns[2].Visible = true;
+            DatosdataGridView.Columns[1].Visible = true;
             IdLoteriatextBox.Focus();
 
         }
@@ -292,16 +296,15 @@ namespace SistemasDeBancas
                 TotaltextBox.Clear();
                 TicketIdTextBox.Clear();
                 Usuariolabel.Text = "";
-                //     DatosdataGridView.DataSource = null;
+                DatosdataGridView.DataSource = null;
                 DatosdataGridView.Columns[0].Visible = true;
                 DatosdataGridView.Columns[2].Visible = true;
                 DatosdataGridView.Columns[1].Visible = true;
+               
                 IdLoteriatextBox.Focus();
 
-
             }
-            
-
+           
 
         }
 
@@ -371,10 +374,10 @@ namespace SistemasDeBancas
                     TotaltextBox.Clear();
                     TicketIdTextBox.Clear();
                     DatosdataGridView.DataSource = null;
-                    TicketIdTextBox.Focus();
                     DatosdataGridView.Columns[0].Visible = true;
                     DatosdataGridView.Columns[2].Visible = true;
                     DatosdataGridView.Columns[1].Visible = true;
+                    TicketIdTextBox.Focus();
                 }
             }
         }
@@ -389,8 +392,20 @@ namespace SistemasDeBancas
                     int TicketId = Utilidades.ToInt(TicketIdTextBox.Text);
                     TicketsBLL.Eliminar(TicketId);
 
+                  
+                    MontotextBox.Clear();
+                    JugadatextBox.Clear();
+                    IdLoteriatextBox.Clear();
+                    NombreLoteriatextBox.Clear();
+                    TotaltextBox.Clear();
                     TicketIdTextBox.Clear();
+                    DatosdataGridView.DataSource = null;
                     TicketIdTextBox.Focus();
+                    DatosdataGridView.Columns[0].Visible = true;
+                    DatosdataGridView.Columns[2].Visible = true;
+                    DatosdataGridView.Columns[1].Visible = true;
+                    TicketIdTextBox.Focus();
+
 
                 }
             }
