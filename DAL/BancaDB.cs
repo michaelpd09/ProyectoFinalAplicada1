@@ -20,6 +20,7 @@ namespace DAL
         public virtual DbSet<Detalles> detalles { get; set; }
         public virtual DbSet<TicketsDetalles> ticketsDetalles { get; set; }
 
+        // Mapeo
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Tickets>()
