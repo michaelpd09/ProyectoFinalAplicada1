@@ -72,6 +72,7 @@ namespace SistemasDeBancas.Registros
         {
             var cl = new Consulta.ConsultarBanca();
             cl.Show();
+            Close();
         }
     }
 }

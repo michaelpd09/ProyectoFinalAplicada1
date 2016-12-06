@@ -123,7 +123,7 @@
             this.CamposComboBox.FormattingEnabled = true;
             this.CamposComboBox.Items.AddRange(new object[] {
             "Id Detalle",
-            "Id Loteria"});
+            "Nombre"});
             this.CamposComboBox.Location = new System.Drawing.Point(65, 34);
             this.CamposComboBox.Name = "CamposComboBox";
             this.CamposComboBox.Size = new System.Drawing.Size(165, 39);
@@ -158,6 +158,7 @@
             this.EditarButton.Text = "Editar";
             this.EditarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EditarButton.UseVisualStyleBackColor = true;
+            this.EditarButton.Click += new System.EventHandler(this.EditarButton_Click);
             // 
             // SalirButton
             // 
@@ -188,6 +189,7 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // ConsultarBanca
             // 

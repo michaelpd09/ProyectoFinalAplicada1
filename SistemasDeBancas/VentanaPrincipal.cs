@@ -292,8 +292,11 @@ namespace SistemasDeBancas
                 TotaltextBox.Clear();
                 TicketIdTextBox.Clear();
                 Usuariolabel.Text = "";
-           //     DatosdataGridView.DataSource = null;
-                     IdLoteriatextBox.Focus();
+                //     DatosdataGridView.DataSource = null;
+                DatosdataGridView.Columns[0].Visible = true;
+                DatosdataGridView.Columns[2].Visible = true;
+                DatosdataGridView.Columns[1].Visible = true;
+                IdLoteriatextBox.Focus();
 
 
             }
